@@ -25,18 +25,18 @@ if (!require(ggplot2, quietly = TRUE)) {
 
 # ====    2 Dataset exploration  ===============================================
 
-my_data <- iris
+iris_petal_data <- iris
 
 # Let's explore the dataset
-str(my_data)
+str(iris_petal_data)
 
-summary(my_data$Petal.Length)
+summary(iris_petal_data$Petal.Length)
 
 # Let's explore the distribution of petal length across the different species
 
 qplot(
   Petal.Length,
-  data = my_data,
+  data = iris_petal_data,
   geom = 'density',
   color = Species,
   fill = Species
